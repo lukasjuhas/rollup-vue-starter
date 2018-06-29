@@ -1,0 +1,45 @@
+/*
+* Media query to respond to a minimum size (mobile first)
+*/
+@mixin resp-min($size) {
+  @media screen and (min-width: $size) {
+    @content;
+  }
+}
+
+/*
+* Media query to respond to a maximum size
+*/
+@mixin resp-max($size) {
+  @media screen and (max-width: $size) {
+    @content;
+  }
+}
+
+/*
+* Placeholder mixin for <input>
+*/
+@mixin placeholder {
+  $placeholders: ':-webkit-input' ':-moz' '-moz' '-ms-input';
+
+  @each $placeholder in $placeholders {
+    &:#{$placeholder}-placeholder {
+      @content;
+    }
+  }
+}
+
+/**
+* Clearfix
+*/
+@mixin clearfix {
+  &::after,
+  &::before {
+    display: table;
+    content: ' ';
+  }
+
+  &::after {
+    clear: both;
+  }
+}

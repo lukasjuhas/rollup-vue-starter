@@ -1,0 +1,61 @@
+/**
+ * Clearing and floating
+ */
+.alignleft {
+  float: left;
+}
+
+.alignright {
+  float: right;
+}
+
+.aligncenter {
+  display: block;
+  margin: 0 auto;
+}
+
+.clearfix {
+
+  @include clearfix;
+}
+
+/**
+ * Text aligments
+ */
+.align-text-left {
+  text-align: left;
+}
+
+.align-text-right {
+  text-align: right;
+}
+
+.align-text-center {
+  text-align: center;
+}
+
+/**
+ * Elements visibility
+ */
+.visible-on-mobile {
+  display: none;
+
+  @include resp-max($breakpoint-sm) {
+    display: block;
+  }
+}
+
+.visible-on-tablet {
+  display: none;
+
+  @include resp-max($breakpoint-md) {
+    display: block;
+  }
+}
+
+.visible-on-desktop {
+
+  @include resp-max($breakpoint-md) {
+    display: none;
+  }
+}

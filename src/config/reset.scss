@@ -1,0 +1,47 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  background-color: transparent;
+  border: 0;
+}
+
+html {
+  font-size: 100%;
+  background-color: $col-background-base;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+button,
+input,
+select,
+textarea {
+  display: inline-block;
+  color: inherit;
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+}
+
+button {
+  cursor: pointer;
+}
+
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+td {
+  text-align: left;
+}
+
+th {
+  text-align: left;
+}
